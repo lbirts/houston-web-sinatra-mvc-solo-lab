@@ -1,0 +1,15 @@
+<h2>List of Puppies: </h2>
+<ul>
+    <% @puppies.each do |pup| %>
+        <a href="/puppies/<%= pup.id %>">
+            <li> <%= pup.name %> </li>
+        </a>
+    <% end %>
+</ul>
+
+<form action="/puppies/new" method="post">
+<input type="hidden" name="_method" value="create" />
+
+<input type="submit" value="Create Pup" />
+
+</form>
